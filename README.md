@@ -33,9 +33,14 @@ graph LR
     B --> F[Ollama LLM<br/>localhost:11434]
     B --> G[ChromaDB<br/>local disk]
 
-    style A fill:#e8f5e9
-    style F fill:#e3f2fd
-    style G fill:#e3f2fd
+    style A fill:#4caf50,color:#000
+    style B fill:#ff9800,color:#000
+    style C fill:#42a5f5,color:#000
+    style D fill:#42a5f5,color:#000
+    style E fill:#42a5f5,color:#000
+    style F fill:#66bb6a,color:#000
+    style G fill:#66bb6a,color:#000
+    style H fill:#ef5350,color:#fff
 
     H[Cloud / Internet] -.->|BLOCKED| B
 ```
@@ -165,7 +170,7 @@ private-docs-auditor/
 │   └── auditor.py       # PII detection, compliance scanning, risk flags
 ├── tests/
 │   ├── __init__.py
-│   └── test_core.py     # 30 tests — all run offline, no Ollama needed
+│   └── test_core.py     # 26 tests — all run offline, no Ollama needed
 ├── data/                # Place your documents here
 ├── app.py               # Streamlit dashboard
 ├── main.py              # CLI (audit, ingest, query, clear)
@@ -181,7 +186,7 @@ private-docs-auditor/
 pytest tests/ -v
 ```
 
-All 30 tests run **offline** — no Ollama, no API keys, no network.
+All 26 tests run **offline** — no Ollama, no API keys, no network.
 
 ---
 
